@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: Arial, sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>height: 100vh;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.player-container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.controls {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-top: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#playPauseBtn, #forwardBtn, #backwardBtn {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 0 5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#progressBar {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 80%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;Enhanced Video Player&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="player-container"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;video id="videoPlayer" width="1920" height="1080" controls&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;source src=“input_video.mp4" type="video/mp4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>Your browser does not support the video tag.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/video&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="controls"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;button id="backwardBtn"&gt;&amp;lt;&amp;lt;&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;button id="playPauseBtn"&gt;&amp;#9658;&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;button id="forwardBtn"&gt;&amp;gt;&amp;gt;&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;input type="range" id="progressBar" value="0" max="100"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.addEventListener("DOMContentLoaded", function () {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const videoPlayer = document.getElementById("videoPlayer");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const playPauseBtn = document.getElementById("playPauseBtn");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const volumeControl = document.getElementById("volumeControl");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const progressBar = document.getElementById("progressBar");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const forwardBtn = document.getElementById("forwardBtn");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const backwardBtn = document.getElementById("backwardBtn");</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>playPauseBtn.addEventListener("click", togglePlayPause);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>volumeControl.addEventListener("input", adjustVolume);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>videoPlayer.addEventListener("timeupdate", updateProgressBar);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>progressBar.addEventListener("input", seek);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>forwardBtn.addEventListener("click", forward);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>backwardBtn.addEventListener("click", backward);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>function togglePlayPause() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>if (videoPlayer.paused) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>videoPlayer.play();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>playPauseBtn.innerHTML = "&amp;#10074;&amp;#10074;"; // Pause symbol</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>videoPlayer.pause();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>playPauseBtn.innerHTML = "&amp;#9658;"; // Play symbol</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>function adjustVolume() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>videoPlayer.volume = volumeControl.value;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>function updateProgressBar() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const percentage = (videoPlayer.currentTime / videoPlayer.duration) * 100;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>progressBar.value = percentage;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>function seek() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const newPosition = (progressBar.value / 100) * videoPlayer.duration;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>videoPlayer.currentTime = newPosition;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>function forward() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>videoPlayer.currentTime += 5; // Forward by 5 seconds</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>function backward() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>videoPlayer.currentTime -= 5; // Backward by 5 seconds</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
